@@ -1,37 +1,34 @@
 # verdict
 
-Testing, quality engineering, and release-confidence patterns for the wider `k3n37` ecosystem.
-
 ## Purpose
+Validate system correctness through testing patterns, quality checks, and repeatable confidence layers.
 
-`verdict` exists to make software quality visible and repeatable across the ecosystem: unit tests, integration checks, contract verification, E2E coverage, and quality gates.
+## Why it matters
+Without a deliberate quality layer, regressions spread faster and delivery speed becomes harder to trust.
 
-## Role in the ecosystem
+## Scope
+This repo focuses on testing strategy, validation layers, and quality engineering patterns. It does not try to own every test in every service repo.
 
-- Quality companion to `forge`, `summit`, and `gateway`
-- Supports safer releases in `runway`
-- Strengthens confidence in the flagship `orbit` platform
+## System Role
+`verdict` is the testing and quality layer for the ecosystem. It defines how services and product systems prove behavior before release.
 
-## Status
+## System Connections
+- Depends on: service and API boundaries from `forge` and `gateway`.
+- Feeds into: release readiness in `runway`.
+- Interacts with: `forge`, `gateway`, `summit`.
 
-Docs-first starter with a test matrix and quality strategy notes.
+## Core Concepts
+- unit coverage
+- integration checks
+- contract validation
+- end-to-end confidence
+- quality gates
 
-## Tech stack
+## Minimal Artifact
+`docs/testing-strategy.md` and `src/test-matrix.ts` provide the starter quality baseline.
 
-- TypeScript
-- Vitest-ready direction
-- Markdown
+## Notes
+The goal is confidence through clear validation layers, not a bloated test taxonomy.
 
-## Structure
-
-```text
-verdict/
-├── docs/
-│   └── testing-strategy.md
-├── src/
-│   └── test-matrix.ts
-├── .editorconfig
-├── .gitignore
-├── README.md
-└── ROADMAP.md
-```
+## Next Steps
+Add service-level examples for contract tests, smoke tests, and CI quality thresholds.
